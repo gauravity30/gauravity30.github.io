@@ -1,34 +1,35 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Scientist/Engineer at <a href='https://www.isro.gov.in/'>Indian Space Research Organisation</a>. 
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: gaurav.jpg
+  image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Ahmedabad, GJ, India</p>
+    <p>gaurav.sc21b026(at)iist.ac.in</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Namaste! I’m a Scientist/Engineer at ISRO, with a deep interest in fluid mechanics and computational fluid dynamics (CFD). I enjoy working at the intersection of engineering and biology, with a particular focus on avian flight.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Previously, I worked on bioinspired aerodynamics and hydrodynamic stability under the guidance of <a href='https://www.iist.ac.in/aerospace/manukv'>Dr. Manu K V</a> and <a href='https://www.iitkgp.ac.in/department/AE/faculty/ae-ssaha'>Dr. Sandeep Saha</a>. My undergraduate research involved studying the aerodynamics of the Common Swift’s tail using high-fidelity CFD and exploring the complex flow structures around it. I also studied the hydrodynamic stability of flow over the Eppler 387 airfoil.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I hold a B.Tech in Aerospace Engineering from <a href='https://www.iist.ac.in/'>IIST, Thiruvananthapuram</a>. My experience spans bioinspired aerodynamics and CFD, with additional background in flight dynamics, aircraft design, and high-performance computing. 
+
+I like fighter aircrafts and animals. Best way to reach me is through <a href='mailto:gauravg.aero@gmail.com'>email</a>.

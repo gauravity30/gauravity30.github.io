@@ -1,14 +1,14 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - gauravity30
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - xcompact3d/Incompact3d
+  - KTH-Nek5000/TurbCourse
+  - eX-Mech/pymech
+  - gauravity30/FreeFEM-Euler
+  - gauravity30/AutoPlotCV
+  - gauravity30/IIST-Beamer-Template
+
+
