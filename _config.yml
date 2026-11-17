@@ -140,6 +140,9 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
   books:
     output: true
   news:
@@ -169,6 +172,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
+  - _notes/README.md
   - bin/
   - Dockerfile
   - docker-compose.yml
@@ -214,6 +218,12 @@ plugins:
 
 # Sitemap settings
 defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+      publish: false
   - scope:
       path: "assets"
     values:

@@ -1,0 +1,56 @@
+---
+layout: page
+title: Notes
+description: A growing collection of ideas, connected through notes.
+permalink: /notes/
+nav: true
+nav_order: 5
+---
+<link rel="stylesheet" href="{{ '/assets/css/notes.css' | relative_url | bust_file_cache }}">
+{% assign notes = site.notes | sort_natural: 'title' %}
+{% if notes.size > 0 %}
+<p><strong>{{ notes.size }} notes</strong></p>
+<label for="notes-search">Find a note by title or tag</label>
+<input id="notes-search" class="form-control mb-4" type="search" placeholder="Search notes…" autocomplete="off">
+<div class="notes-mobile-topics">
+<label for="notes-category">Browse a topic</label>
+<select id="notes-category" class="form-control mb-4"><option value="">All notes</option></select>
+</div>
+{% assign subjects = 'Concepts,Softwares' | split: ',' %}
+{% assign topics = notes | group_by: 'category' | sort_natural: 'name' %}
+<div class="notes-browser">
+<nav class="notes-topics" aria-label="Note topics">
+<button type="button" class="notes-topic-button" data-category="" aria-pressed="true"><span>All notes</span><small>{{ notes.size }}</small></button>
+{% for subject in subjects %}
+<h2>{{ subject }}</h2>
+{% for topic in topics %}
+{% assign parts = topic.name | split: '/' %}
+{% if parts.first == subject %}
+<button type="button" class="notes-topic-button" data-category="{{ topic.name | escape }}" aria-pressed="false"><span>{{ topic.name | remove_first: subject | remove_first: '/' | replace: '/', ' / ' | escape }}</span><small>{{ topic.items.size }}</small></button>
+{% endif %}
+{% endfor %}
+{% endfor %}
+</nav>
+<section class="notes-results" aria-labelledby="notes-current-topic">
+<header class="notes-results-header"><h2 id="notes-current-topic">All notes</h2><p id="notes-count" role="status"></p></header>
+<p id="notes-empty" hidden>No matching notes. Try another search or topic.</p>
+<ul id="notes-list" class="notes-rows">
+{% for note in notes %}
+<li data-url="{{ note.url | relative_url }}"><a href="{{ note.url | relative_url }}"><span>{{ note.title | escape }}</span><span aria-hidden="true" class="notes-row-arrow">↗</span></a></li>
+{% endfor %}
+</ul>
+</section>
+</div>
+<h2 class="mt-4">Connection map</h2>
+<p class="small" id="graph-help">Drag nodes to rearrange. Drag the background to pan; scroll to zoom. Click a node to open its note. Use Tab and Enter to open nodes with the keyboard.</p>
+<div class="graph-controls" aria-label="Map controls">
+<button type="button" id="graph-zoom-in" aria-label="Zoom in">+</button>
+<button type="button" id="graph-zoom-out" aria-label="Zoom out">−</button>
+<button type="button" id="graph-reset">Reset map</button>
+</div>
+<svg id="notes-graph" viewBox="0 0 800 460" role="group" aria-label="Connections between published notes" aria-describedby="graph-help"></svg>
+<script id="notes-data" type="application/json">{{ site.data.notes_graph | jsonify | replace: '<', '\u003c' }}</script>
+<script src="{{ '/assets/js/notes.js' | relative_url | bust_file_cache }}" defer></script>
+{% else %}
+<p>No notes have been published yet. This space will grow into a connected library of ideas.</p>
+{% endif %}

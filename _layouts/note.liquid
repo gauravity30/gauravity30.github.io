@@ -1,0 +1,14 @@
+---
+layout: page
+---
+<link rel="stylesheet" href="{{ '/assets/css/notes.css' | relative_url | bust_file_cache }}">
+{{ content }}
+<hr>
+<h2>Linked from</h2>
+<ul>
+{% for note in page.backlinks %}
+  <li><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></li>
+{% else %}
+  <li>No other published notes link here yet.</li>
+{% endfor %}
+</ul>
