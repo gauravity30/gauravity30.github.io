@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% unless site.data.resume %}
+{% if page.cv_pdf_preview or site.data.resume == nil %}
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
@@ -16,6 +16,7 @@ layout: default
             target="_blank"
             rel="noopener noreferrer"
             class="float-right"
+            aria-label="Download CV PDF"
           >
             <i class="fa-solid fa-file-pdf"></i>
           </a>
@@ -27,29 +28,37 @@ layout: default
     </header>
 
     <article>
-      <div class="cv">
-        {% for entry in site.data.cv %}
-          <a class="anchor" id="{{ entry.title }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
-              {% endif %}
+      {% if page.cv_pdf_preview %}
+        <div class="cv">
+          <p><a href="{{ page.cv_pdf }}" download>Download CV (PDF)</a></p>
+          <div id="cv-pdf-preview" data-pdf-url="{{ page.cv_pdf | escape }}" class="card overflow-hidden"></div>
+        </div>
+        <script defer src="{{ '/assets/js/cv-pdf-preview.js' | relative_url }}"></script>
+      {% else %}
+        <div class="cv">
+          {% for entry in site.data.cv %}
+            <a class="anchor" id="{{ entry.title }}"></a>
+            <div class="card mt-3 p-3">
+              <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+              <div>
+                {% if entry.type == 'list' %}
+                  {% include cv/list.liquid %}
+                {% elsif entry.type == 'map' %}
+                  {% include cv/map.liquid %}
+                {% elsif entry.type == 'nested_list' %}
+                  {% include cv/nested_list.liquid %}
+                {% elsif entry.type == 'time_table' %}
+                  {% include cv/time_table.liquid %}
+                {% elsif entry.type == 'list_groups' %}
+                  {% include cv/list_groups.liquid %}
+                {% else %}
+                  {{ entry.contents }}
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </article>
   </div>
 {% else %}
@@ -124,4 +133,4 @@ layout: default
       </div>
     </article>
   </div>
-{% endunless %}
+{% endif %}
