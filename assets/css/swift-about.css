@@ -1,0 +1,175 @@
+.swift-about {
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+}
+
+.swift-scene {
+  margin: 0 0 clamp(2rem, 6vw, 3rem);
+}
+
+.swift-scene__stage {
+  position: relative;
+}
+
+.swift-scene__art {
+  position: relative;
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.swift-scene__sky {
+  opacity: 0.22;
+}
+
+.swift-scene__caption {
+  margin-top: 0.55rem;
+  font-size: 0.875rem;
+}
+
+.swift-scene__caption span:not([hidden]) {
+  display: block;
+}
+
+.swift-scene.is-flow .swift-scene__observer-caption {
+  display: none;
+}
+
+.swift-scene__toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-height: 44px;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid #7696a8;
+  border-radius: 0.625rem;
+  background: #163746;
+  color: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.swift-scene__toggle:hover {
+  background: #214c60;
+}
+
+.swift-scene__toggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+.swift-scene__sky,
+.swift-scene__flow,
+.swift-scene__bird {
+  transition: opacity 400ms ease, fill 400ms ease, stroke 400ms ease;
+}
+
+.swift-scene__flow {
+  position: absolute;
+  top: 15.74%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swift-scene.is-flow .swift-scene__sky {
+  opacity: 0;
+}
+
+.swift-scene.is-flow .swift-scene__flow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.swift-scene__bird {
+  fill: var(--global-text-color);
+  stroke: transparent;
+}
+
+.swift-scene.is-flow .swift-scene__bird {
+  fill: var(--global-bg-color);
+  stroke: var(--global-text-color);
+}
+
+.swift-about__profile {
+  display: grid;
+  grid-template-columns: minmax(0, 33%) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.swift-about__portrait {
+  display: block;
+  justify-self: center;
+  width: 100%;
+  max-width: 13.5rem;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.swift-about__summary,
+.swift-about__interests {
+  text-wrap: pretty;
+}
+
+@media (min-width: 640px) {
+  .swift-about__summary,
+  .swift-about__interests {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+.swift-about__bio h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+}
+
+.swift-about__name-hi {
+  display: inline-block;
+}
+
+.swift-about__role {
+  margin-bottom: 1.25rem;
+}
+
+.swift-about__bio > :last-child {
+  margin-bottom: 0;
+}
+
+.swift-about__interests {
+  margin: 1.5rem 0 0;
+}
+
+.swift-about__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem clamp(1rem, 5vw, 2rem);
+  margin-top: 2.25rem;
+  padding: 0.65rem 1rem;
+}
+
+@media (max-width: 480px) {
+  .swift-about__profile {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .swift-about__portrait {
+    max-width: 11rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swift-scene__sky,
+  .swift-scene__flow,
+  .swift-scene__bird {
+    transition: none;
+  }
+}

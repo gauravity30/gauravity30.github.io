@@ -1,0 +1,480 @@
+/*
+markdown-cv davewhipp styles, scoped to the portfolio CV content.
+https://github.com/elipapa/markdown-cv
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Eliseo Papa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+@media screen {
+  .markdown-cv-content, .markdown-cv-content div, .markdown-cv-content span, .markdown-cv-content applet, .markdown-cv-content object, .markdown-cv-content iframe, .markdown-cv-content h1, .markdown-cv-content h2, .markdown-cv-content h3, .markdown-cv-content h4, .markdown-cv-content h5, .markdown-cv-content h6, .markdown-cv-content p, .markdown-cv-content blockquote, .markdown-cv-content pre, .markdown-cv-content a, .markdown-cv-content abbr, .markdown-cv-content acronym, .markdown-cv-content address, .markdown-cv-content big, .markdown-cv-content cite, .markdown-cv-content code, .markdown-cv-content del, .markdown-cv-content dfn, .markdown-cv-content em, .markdown-cv-content img, .markdown-cv-content ins, .markdown-cv-content kbd, .markdown-cv-content q, .markdown-cv-content s, .markdown-cv-content samp, .markdown-cv-content small, .markdown-cv-content strike, .markdown-cv-content strong, .markdown-cv-content sub, .markdown-cv-content sup, .markdown-cv-content tt, .markdown-cv-content var, .markdown-cv-content b, .markdown-cv-content u, .markdown-cv-content i, .markdown-cv-content center, .markdown-cv-content dl, .markdown-cv-content dt, .markdown-cv-content dd, .markdown-cv-content ol, .markdown-cv-content ul, .markdown-cv-content li, .markdown-cv-content fieldset, .markdown-cv-content form, .markdown-cv-content label, .markdown-cv-content legend, .markdown-cv-content table, .markdown-cv-content caption, .markdown-cv-content tbody, .markdown-cv-content tfoot, .markdown-cv-content thead, .markdown-cv-content tr, .markdown-cv-content th, .markdown-cv-content td, .markdown-cv-content article, .markdown-cv-content aside, .markdown-cv-content canvas, .markdown-cv-content details, .markdown-cv-content embed, .markdown-cv-content figure, .markdown-cv-content figcaption, .markdown-cv-content footer, .markdown-cv-content header, .markdown-cv-content hgroup, .markdown-cv-content menu, .markdown-cv-content nav, .markdown-cv-content output, .markdown-cv-content ruby, .markdown-cv-content section, .markdown-cv-content summary, .markdown-cv-content time, .markdown-cv-content mark, .markdown-cv-content audio, .markdown-cv-content video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  .markdown-cv-content article, .markdown-cv-content aside, .markdown-cv-content details, .markdown-cv-content figcaption, .markdown-cv-content figure, .markdown-cv-content footer, .markdown-cv-content header, .markdown-cv-content hgroup, .markdown-cv-content menu, .markdown-cv-content nav, .markdown-cv-content section {
+    display: block;
+  }
+
+  .markdown-cv-content {
+    line-height: 1;
+  }
+
+  .markdown-cv-content ol, .markdown-cv-content ul {
+    list-style: disc;
+    padding-inline-start: 1.25em;
+  }
+
+  .markdown-cv-content blockquote, .markdown-cv-content q {
+    quotes: none;
+  }
+
+  .markdown-cv-content blockquote:before, .markdown-cv-content blockquote:after, .markdown-cv-content q:before, .markdown-cv-content q:after {
+    content: '';
+    content: none;
+  }
+
+  .markdown-cv-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .markdown-cv-content {
+    font: normal normal 400;
+    font-size: 100%;
+    line-height: 1.5em;
+    font-family: inherit;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+
+  .markdown-cv-content p {
+    position: relative;
+    left: 25%;
+    margin-bottom: 0.7em;
+    margin-right: 0;
+    width: 55%;
+  }
+
+  .markdown-cv-content code {
+    font: normal normal;
+    font-size: 90%;
+    font-family: Monaco,Menlo,monospace,sans-serif;
+    color: #aaa;
+  }
+
+  .markdown-cv-content p code {
+    position: absolute;
+    text-align: right;
+    right: -20%;
+  }
+
+  .markdown-cv-content ul, .markdown-cv-content ol {
+    position: relative;
+    left: 25%;
+    width: 75%;
+    margin-bottom: 1.5em;
+    margin-top: -0.5em;
+  }
+
+  .markdown-cv-content li {
+    text-indent: 0;
+  }
+
+  .markdown-cv-content li ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-top: 0.25em;
+  }
+
+  .markdown-cv-content h1, .markdown-cv-content h2, .markdown-cv-content h3, .markdown-cv-content h4 {
+    font-weight: 400;
+    font-family: inherit;
+    width: 80%;
+  }
+
+  .markdown-cv-content h1 {
+    text-align: left;
+    font-size: 3em;
+    line-height: 1em;
+    position: relative;
+    left: 25%;
+  }
+
+  .markdown-cv-content h1+p {
+    font-style: italic;
+    font-size: 110%;
+  }
+
+  .markdown-cv-content h2 {
+    font-size: 1.1em;
+    color: #c78283;
+    margin-top: 3em;
+    position: relative;
+    top: 1.4em;
+    text-align: right;
+    width: 20%;
+  }
+
+  .markdown-cv-content > .markdown-cv-section:first-child > h2 {
+    margin-top: 0;
+  }
+
+  .markdown-cv-content h3 {
+    font-size: 1em;
+    line-height: 2em;
+    position: relative;
+    top: 1.7em;
+    text-align: right;
+    width: 20%;
+  }
+
+  .markdown-cv-content a {
+    color: inherit;
+  }
+
+  .markdown-cv-content a:hover {
+    color:#39f
+  }
+
+  .markdown-cv-content #webaddress {
+    margin-top: 1em;
+    position: relative;
+    left: 25%;
+    color: #c78283;
+    font-family: Monaco,Menlo,monospace,sans-serif;
+    font-size: 100%;
+  }
+
+  .markdown-cv-content #webaddress a {
+    text-decoration: none;
+  }
+
+  .markdown-cv-content em {
+    font-style: italic;
+  }
+
+  .markdown-cv-content strong {
+    font-weight: bold;
+  }
+
+  .markdown-cv-content #address {
+    display: none;
+  }
+}
+
+@media print {
+  .markdown-cv-content, .markdown-cv-content div, .markdown-cv-content span, .markdown-cv-content applet, .markdown-cv-content object, .markdown-cv-content iframe, .markdown-cv-content h1, .markdown-cv-content h2, .markdown-cv-content h3, .markdown-cv-content h4, .markdown-cv-content h5, .markdown-cv-content h6, .markdown-cv-content p, .markdown-cv-content blockquote, .markdown-cv-content pre, .markdown-cv-content a, .markdown-cv-content abbr, .markdown-cv-content acronym, .markdown-cv-content address, .markdown-cv-content big, .markdown-cv-content cite, .markdown-cv-content code, .markdown-cv-content del, .markdown-cv-content dfn, .markdown-cv-content em, .markdown-cv-content img, .markdown-cv-content ins, .markdown-cv-content kbd, .markdown-cv-content q, .markdown-cv-content s, .markdown-cv-content samp, .markdown-cv-content small, .markdown-cv-content strike, .markdown-cv-content strong, .markdown-cv-content sub, .markdown-cv-content sup, .markdown-cv-content tt, .markdown-cv-content var, .markdown-cv-content b, .markdown-cv-content u, .markdown-cv-content i, .markdown-cv-content center, .markdown-cv-content dl, .markdown-cv-content dt, .markdown-cv-content dd, .markdown-cv-content ol, .markdown-cv-content ul, .markdown-cv-content li, .markdown-cv-content fieldset, .markdown-cv-content form, .markdown-cv-content label, .markdown-cv-content legend, .markdown-cv-content table, .markdown-cv-content caption, .markdown-cv-content tbody, .markdown-cv-content tfoot, .markdown-cv-content thead, .markdown-cv-content tr, .markdown-cv-content th, .markdown-cv-content td, .markdown-cv-content article, .markdown-cv-content aside, .markdown-cv-content canvas, .markdown-cv-content details, .markdown-cv-content embed, .markdown-cv-content figure, .markdown-cv-content figcaption, .markdown-cv-content footer, .markdown-cv-content header, .markdown-cv-content hgroup, .markdown-cv-content menu, .markdown-cv-content nav, .markdown-cv-content output, .markdown-cv-content ruby, .markdown-cv-content section, .markdown-cv-content summary, .markdown-cv-content time, .markdown-cv-content mark, .markdown-cv-content audio, .markdown-cv-content video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  .markdown-cv-content article, .markdown-cv-content aside, .markdown-cv-content details, .markdown-cv-content figcaption, .markdown-cv-content figure, .markdown-cv-content footer, .markdown-cv-content header, .markdown-cv-content hgroup, .markdown-cv-content menu, .markdown-cv-content nav, .markdown-cv-content section {
+    display: block;
+  }
+
+  .markdown-cv-content {
+    line-height: 1;
+  }
+
+  .markdown-cv-content ol, .markdown-cv-content ul {
+    list-style: disc;
+    padding-inline-start: 1.25em;
+  }
+
+  .markdown-cv-content blockquote, .markdown-cv-content q {
+    quotes: none;
+  }
+
+  .markdown-cv-content blockquote:before, .markdown-cv-content blockquote:after, .markdown-cv-content q:before, .markdown-cv-content q:after {
+    content: '';
+    content: none;
+  }
+
+  .markdown-cv-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .markdown-cv-content {
+    font: normal normal 400;
+    font-size: 12pt;
+    line-height: 1.35em;
+    font-family: inherit;
+  }
+
+  .markdown-cv-content p {
+    position: relative;
+    left: 25%;
+    margin-bottom: 0.2em;
+    margin-right: 0;
+    width: 60%;
+  }
+
+  .markdown-cv-content code {
+    font: normal normal;
+    font-size: 90%;
+    font-family: Monaco,Menlo,monospace,sans-serif;
+    color: #ccc;
+  }
+
+  .markdown-cv-content p code {
+    position: absolute;
+    text-align: right;
+    right: -20%;
+  }
+
+  .markdown-cv-content ul, .markdown-cv-content ol {
+    position: relative;
+    left: 25%;
+    width: 75%;
+    margin-bottom: 1em;
+  }
+
+  .markdown-cv-content li {
+    text-indent: 0;
+  }
+
+  .markdown-cv-content li ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin-top: 0.25em;
+  }
+
+  .markdown-cv-content h1, .markdown-cv-content h2, .markdown-cv-content h3, .markdown-cv-content h4 {
+    font-weight: 400;
+    font-family: inherit;
+    width: 80%;
+  }
+
+  .markdown-cv-content h1 {
+    text-align: left;
+    font-size: 3em;
+    line-height: 1em;
+    position: relative;
+    left: 25%;
+  }
+
+  .markdown-cv-content h1+p {
+    font-style: italic;
+    font-size: 110%;
+  }
+
+  .markdown-cv-content h2 {
+    font-size: 1.1em;
+    color: #c78283;
+    margin-top: 2em;
+    position: relative;
+    top: 1.2em;
+    text-align: right;
+    width: 20%;
+  }
+
+  .markdown-cv-content h3 {
+    font-size: 1em;
+    line-height: 2em;
+    color: #ccc;
+    position: relative;
+    top: 1.6em;
+    text-align: right;
+    width: 20%;
+  }
+
+  .markdown-cv-content a {
+    color: inherit;
+    text-decoration:none
+  }
+
+  .markdown-cv-content a:hover {
+    color:#39f
+  }
+
+  .markdown-cv-content #webaddress {
+    margin-top: 1em;
+    position: relative;
+    left: 25%;
+    color: #ccc;
+    font-family: Monaco,Menlo,monospace,sans-serif;
+    font-size: 90%;
+  }
+
+  .markdown-cv-content #webaddress a {
+    text-decoration: none;
+  }
+
+  .markdown-cv-content em {
+    font-style: normal;
+    color: #2d4e5e
+  }
+
+  .markdown-cv-content strong {
+    font-weight: bold;
+  }
+
+  .markdown-cv-content #ghbutton {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+/* Portfolio integration and space for long academic titles. */
+.markdown-cv-actions {
+  text-align: right;
+}
+
+.markdown-cv-content p.markdown-cv-entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  width: 75%;
+}
+
+.markdown-cv-content p .markdown-cv-date {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  max-width: 45%;
+  white-space: normal;
+  color: var(--global-text-color-light);
+}
+
+.markdown-cv-content .markdown-cv-entry-title,
+.markdown-cv-content .markdown-cv-entry-title a,
+.markdown-cv-content .markdown-cv-publication-title,
+.markdown-cv-content .markdown-cv-skill-title {
+  color: #2698ba;
+}
+
+.markdown-cv-content .markdown-cv-entry-title a:hover {
+  text-decoration: underline;
+}
+
+.markdown-cv-content ol.markdown-cv-publications {
+  list-style-type: decimal;
+}
+
+@media screen {
+  .markdown-cv-content .markdown-cv-subtitle + ol.markdown-cv-publications {
+    margin-top: 0.4em;
+  }
+}
+
+.markdown-cv-content a.markdown-cv-publication-title:hover {
+  color: #39f;
+}
+
+.markdown-cv-content .markdown-cv-affiliation {
+  font-style: italic;
+}
+
+@media screen {
+  .markdown-cv-content .markdown-cv-project-summary + ul {
+    margin-top: 0.35em;
+  }
+}
+
+.markdown-cv-content p.markdown-cv-project-summary {
+  margin-bottom: 0.2em;
+}
+
+.markdown-cv-content li + li {
+  margin-top: 0.2em;
+}
+
+@media screen and (min-width: 601px) {
+  .markdown-cv-content > .markdown-cv-section {
+    display: grid;
+    grid-template-columns: 20% minmax(0, 1fr);
+    column-gap: 5%;
+    align-items: start;
+    margin-top: 3em;
+  }
+
+  .markdown-cv-content > .markdown-cv-section:first-child {
+    margin-top: 1.5em;
+  }
+
+  .markdown-cv-content > .markdown-cv-section > h2 {
+    top: 0;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .markdown-cv-content .markdown-cv-section-body p {
+    left: 0;
+    width: 73.333%;
+  }
+
+  .markdown-cv-content .markdown-cv-section-body p.markdown-cv-entry-header,
+  .markdown-cv-content .markdown-cv-section-body ul,
+  .markdown-cv-content .markdown-cv-section-body ol {
+    left: 0;
+    width: 100%;
+  }
+
+  .markdown-cv-content .markdown-cv-section-body h3 {
+    top: 0;
+    width: auto;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .markdown-cv-content p,
+  .markdown-cv-content p.markdown-cv-entry-header,
+  .markdown-cv-content ul,
+  .markdown-cv-content ol,
+  .markdown-cv-content h2,
+  .markdown-cv-content h3 {
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .markdown-cv-content p.markdown-cv-entry-header {
+    flex-wrap: wrap;
+  }
+
+  .markdown-cv-content p .markdown-cv-date {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+@media print {
+  .markdown-cv-actions {
+    display: none;
+  }
+}
