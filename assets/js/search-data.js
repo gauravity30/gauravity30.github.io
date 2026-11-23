@@ -55,23 +55,7 @@ ninja.data = [{
             window.location.href = "/blog/2025/NektarInstallation/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "notes-conceptual-design",
+      },{id: "notes-conceptual-design",
           title: 'Conceptual Design',
           description: "",
           section: "Notes",handler: () => {
@@ -346,6 +330,81 @@ ninja.data = [{
           description: "",
           section: "Notes",handler: () => {
               window.location.href = "/notes/Concepts/Astrobiology/Tree%20of%20Life/";
+            },},{id: "notes-cfd-benchmark-problems",
+          title: 'CFD Benchmark Problems',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/CFD%20Benchmark%20Problems/";
+            },},{id: "notes-cfd-boundary-conditions",
+          title: 'CFD Boundary Conditions',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/CFD%20Boundary%20Conditions/";
+            },},{id: "notes-cfd-concepts",
+          title: 'CFD Concepts',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/CFD%20Concepts/";
+            },},{id: "notes-compressible-fluxes-and-shocks",
+          title: 'Compressible Fluxes and Shocks',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Compressible%20Fluxes%20and%20Shocks/";
+            },},{id: "notes-consistency-stability-and-convergence",
+          title: 'Consistency Stability and Convergence',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Consistency%20Stability%20and%20Convergence/";
+            },},{id: "notes-convection-diffusion-schemes",
+          title: 'Convection Diffusion Schemes',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Convection%20Diffusion%20Schemes/";
+            },},{id: "notes-finite-difference-stencils",
+          title: 'Finite Difference Stencils',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Finite%20Difference%20Stencils/";
+            },},{id: "notes-finite-volume-flux-balance",
+          title: 'Finite Volume Flux Balance',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Finite%20Volume%20Flux%20Balance/";
+            },},{id: "notes-governing-equations-of-cfd",
+          title: 'Governing Equations of CFD',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Governing%20Equations%20of%20CFD/";
+            },},{id: "notes-les-dns-and-hybrid-methods",
+          title: 'LES DNS and Hybrid Methods',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/LES%20DNS%20and%20Hybrid%20Methods/";
+            },},{id: "notes-pde-type-and-characteristics",
+          title: 'PDE Type and Characteristics',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/PDE%20Type%20and%20Characteristics/";
+            },},{id: "notes-pressure-velocity-coupling",
+          title: 'Pressure Velocity Coupling',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Pressure%20Velocity%20Coupling/";
+            },},{id: "notes-rans-and-turbulence-closure",
+          title: 'RANS and Turbulence Closure',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/RANS%20and%20Turbulence%20Closure/";
+            },},{id: "notes-sparse-linear-systems-in-cfd",
+          title: 'Sparse Linear Systems in CFD',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Sparse%20Linear%20Systems%20in%20CFD/";
+            },},{id: "notes-time-integration-and-diffusion",
+          title: 'Time Integration and Diffusion',
+          description: "",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/Concepts/CFD/Time%20Integration%20and%20Diffusion/";
             },},{id: "notes-application-of-integrals",
           title: 'Application of Integrals',
           description: "",
@@ -1096,51 +1155,6 @@ ninja.data = [{
           description: "",
           section: "Notes",handler: () => {
               window.location.href = "/notes/Softwares/ffmpeg/Commands/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
