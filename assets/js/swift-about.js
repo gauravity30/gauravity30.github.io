@@ -7,13 +7,19 @@
   const description = document.getElementById("swift-art-description");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const profile = description.textContent;
+  const appleBrowser = navigator.vendor === "Apple Computer, Inc." ||
+    /iPhone|iPad|iPod/.test(navigator.userAgent);
+  // Apple browsers can play VP9 while dropping its alpha channel.
+  const wakeSource = appleBrowser && wake.canPlayType('video/mp4; codecs="hvc1"')
+    ? wake.dataset.hevcSrc
+    : wake.dataset.src;
 
   function updatePlayback() {
     if (!scene.classList.contains("is-flow") || reducedMotion.matches) {
       wake.pause();
       return;
     }
-    if (!wake.hasAttribute("src")) wake.src = wake.dataset.src;
+    if (!wake.hasAttribute("src")) wake.src = wakeSource;
     wake.play().catch(() => {
       // The poster remains available if playback is blocked.
     });
